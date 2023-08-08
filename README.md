@@ -20,5 +20,5 @@ cd Maniac.py
 
 pip install requests
 
-python MANIAC.py
+python Maniac.py
 
