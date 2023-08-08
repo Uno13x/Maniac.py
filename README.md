@@ -16,5 +16,5 @@ ls
 
 cd Maniac.py
 
-python Maniac.py
+python MANIAC.py
 
