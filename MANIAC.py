@@ -1,6 +1,10 @@
 import time
+import os
 
+def clear_terminal():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
+clear_terminal()
 
 class TextColor:
     RED = '\033[91m'
