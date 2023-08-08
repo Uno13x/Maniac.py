@@ -10,5 +10,11 @@ apt upgrade
 
 apt install python
 
-git clone
+git clone https://github.com/Uno13x/Maniac.py
+
+ls
+
+cd Maniac.py
+
+python Maniac.py
 
