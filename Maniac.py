@@ -1,6 +1,11 @@
 import time
 import requests
+import os
 
+def clear_terminal():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+clear_terminal()
 
 
 class TextColor:
