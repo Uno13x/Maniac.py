@@ -20,5 +20,7 @@ cd Maniac.py
 
 pip install requests
 
+pip install colorama
+
 python Maniac.py
 
