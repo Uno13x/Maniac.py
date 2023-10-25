@@ -38,7 +38,7 @@ def check_social_profile(platform, username):
     elif platform == "twitter":
         url = f"https://twitter.com/{username}/"
     elif platform == "youtube":
-        url = f"https://www.youtube.com/user/{username}/"
+        url = f"https://www.youtube.com/@{username}/"
     elif platform == "linkedin":
         url = f"https://www.linkedin.com/in/{username}/"
     elif platform == "facebook":
