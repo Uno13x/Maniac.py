@@ -1,11 +1,6 @@
 import time
 import requests
-import os
 
-def clear_terminal():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-clear_terminal()
 
 
 class TextColor:
@@ -14,19 +9,21 @@ class TextColor:
     YELLOW = '\033[93m'
     END: str = '\033[0m'
 
-text = "   __  ___            _\n"\
-       "  /  |/  /___ _____  (_)___ ______\n"\
-       " / /|_/ / __ `/ __ \/ / __ `/ ___/\n"\
-       "/ /  / / /_/ / / / / / /_/ / /__\n"\
-       "/_/  /_/\__,_/_/ /_/_/\__,_/\___/"
+text ="""███▄ ▄███▓ ▄▄▄       ███▄    █  ██▓ ▄▄▄       ▄████▄  
+▓██▒▀█▀ ██▒▒████▄     ██ ▀█   █ ▓██▒▒████▄    ▒██▀ ▀█  
+▓██    ▓██░▒██  ▀█▄  ▓██  ▀█ ██▒▒██▒▒██  ▀█▄  ▒▓█    ▄ 
+▒██    ▒██ ░██▄▄▄▄██ ▓██▒  ▐▌██▒░██░░██▄▄▄▄██ ▒▓▓▄ ▄██▒
+▒██▒   ░██▒ ▓█   ▓██▒▒██░   ▓██░░██░ ▓█   ▓██▒▒ ▓███▀ ░
+░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒░   ▒ ▒ ░▓   ▒▒   ▓▒█░░ ░▒ ▒  ░
+░  ░      ░  ▒   ▒▒ ░░ ░░   ░ ▒░ ▒ ░  ▒   ▒▒ ░  ░  ▒   
+░      ░     ░   ▒      ░   ░ ░  ▒ ░  ░   ▒   ░        
+       ░         ░  ░         ░  ░        ░  ░░ ░      
+                                              ░         """
+
 
 red_text = TextColor.RED + text + TextColor.END
 print(red_text)
-red_text = TextColor.RED + "Create by Uno" + TextColor.END
-print(red_text)
-print("\033[91mDica: não de espaço \033[0m")
-print("\033[91mVersion 1.5 \033[0m")
-print("\033[91m___________________________________________________")
+print("\033[91m_________________Create by unoxys 2.0______________________")
 
 
 
@@ -53,6 +50,16 @@ def check_social_profile(platform, username):
         url = f"https://www.pinterest.com/{username}/"
     elif platform == "ifunny":
         url = f"https://ifunny.co/user/{username}/"
+    elif platform == "spotify":
+        url = f"https://open.spotify.com/user/{username}/"
+    elif platform == "playstation":
+        url = f"https://psnprofiles.com/{username}"
+    elif platform == "tumblr":
+        url = f"https://www.tumblr.com/{username}"
+    elif platform == "shopee":
+        url = f"https://shopee.com.br/{username}/"
+    elif platform == "telegram":
+        url = f"https://web.telegram.org/k/#@{username}"
     else:
         return None
 
@@ -66,10 +73,10 @@ def check_social_profile(platform, username):
 
 
 platforms = ["instagram", "twitter", "youtube", "linkedin", "facebook", "snapchat", "reddit", "tiktok", "pinterest",
-             "ifunny",]
+             "ifunny", "spotify", "playstation", "tumblr", "shopee", "telegram"]
 
 
-username = input("\033[93mDigite o nome de usuário: \033[0m")
+username = input("\033[31mUsername: \033[0m")
 profile_found = False
 
 for platform in platforms:
